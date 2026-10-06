@@ -1,0 +1,19 @@
+# Runtime parameters — loaded by the registry and passed as Graph(config=...).
+# Separate from config/agent.yaml, which is the static manifest.
+
+max_retry: 3
+timeout_s: 30
+
+# Parsing bounds, forwarded to the inner workflow graph.
+# max_clauses: upper bound on the number of clause blocks parsed from one
+# document. Validated in src/graph/graph.py declared_settings(); an
+# out-of-contract value falls back to the built-in floor (200).
+parser:
+  max_clauses: 200
+
+# Report tuning, forwarded to the inner workflow graph.
+# risk_threshold: severity floor in 0..1. A risk indicator scoring below it is
+# counted in the report's metadata but not listed, so raising this value
+# visibly shortens the Risk Flags section.
+review:
+  risk_threshold: 0.5

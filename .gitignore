@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+.env
+*.egg
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+
+# Centrally distributed reference files. They are placed locally when the
+# repository is set up, but are never tracked here — the copies that matter live
+# upstream, and a tracked copy would drift out of date silently.
+CLAUDE.md
+security_rules/
+ci_stubs/
+MANIFEST.md
+
+# The publication preparation tool. Copied in, run, and removed again.
+prepare-for-publication.sh
